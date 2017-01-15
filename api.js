@@ -52,4 +52,12 @@ var nameList;
 			}
         })
     }
+    function playSong(fileName) {
+	var audio = new Audio(fileName);
+	audio.play();
+	audio.addEventListener('ended', function() {
+		// when its done
+		playSong("second.wav")
+	});
+}
 
