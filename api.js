@@ -62,10 +62,7 @@ var nameList;
 		audio2.play();
 	});
 }
-function toKey(data){
-
-
-
-
-
+function toKey(){
+ var key = data[1].score * 22;
+ console.log(key);
 }
