@@ -1,4 +1,4 @@
-var nameList;
+	var nameList;
 	var rawKey;
 	var intKey;
 	function onKeyUp() {
