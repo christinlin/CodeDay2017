@@ -8,7 +8,7 @@ var nameList;
 		console.log($("#getText"));
 		$( "#getText").click(function() {
 		sendRequest();
-		playSong('first.wav');
+		playSong();
 		});
 	});
 	
@@ -53,12 +53,19 @@ var nameList;
 			}
         })
     }
-    function playSong(fileName) {
-	var audio = new Audio(fileName);
-	audio.play();
+    function playSong() {
+	var audio1 = new Audio("first.wav");
+	var audio2 = new Audio("second.wav");
+	audio2.pause();
 	audio.addEventListener('ended', function() {
 		// when its done
-		playSong("second.wav")
+		audio2.play();
 	});
 }
+function toKey(data){
 
+
+
+
+
+}
