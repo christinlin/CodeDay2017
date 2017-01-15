@@ -60,12 +60,8 @@ function toKey(){
 		intKey = parseInt(key);
 		console.log(intKey);
 	}
-    function playSong() {
-	var audio = document.getElementById("player");
-audio.addEventListener("ended", function() {
-    audio.src = "nextAudio.mp3";
-    audio.play();
-});
+    ;
+
 
 	};
 }
