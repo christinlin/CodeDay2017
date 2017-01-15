@@ -57,7 +57,7 @@ var nameList;
 	var audio1 = new Audio("first.wav");
 	var audio2 = new Audio("second.wav");
 	audio2.pause();
-	audio.addEventListener('ended', function() {
+	audio1.addEventListener('ended', function() {
 		// when its done
 		audio2.play();
 	});
