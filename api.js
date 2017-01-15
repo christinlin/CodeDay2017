@@ -60,5 +60,3 @@ function toKey(){
 		intKey = parseInt(key);
 		console.log(intKey);
 	}
-
-}
