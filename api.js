@@ -8,7 +8,7 @@ var nameList;
 		console.log($("#getText"));
 		$( "#getText").click(function() {
 		sendRequest();
-		playSong();
+		//playSong();
 		});
 	});
 	
