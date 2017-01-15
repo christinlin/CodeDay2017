@@ -1,6 +1,9 @@
+	//<script type="text/javascript">
+
 	var nameList;
 	var rawKey;
 	var intKey;
+	var textLength;
 	function onKeyUp() {
 	}
 	
@@ -47,6 +50,7 @@
 				rawKey = data.documents[0].score;
 				console.log(data);
 				console.log(rawKey);
+				textLength = nameList.split(" ").length;
 				toKey();
 			},
 			error: function(xhrObj){
@@ -59,4 +63,11 @@ function toKey(){
 		var key = parseFloat(rawKey) * 22;
 		intKey = parseInt(key);
 		console.log(intKey);
-	}
+		document.getElementById("p1").innerHTML = "Your raw emotion index: " + rawKey
+		document.getElementById("p2").innerHTML = "Your happines rating: " + intKey 
+		document.getElementById("p3").innerHTML = "The length of your piece: " + textLength; 
+	}	
+	
+	
+	
+//</script>
