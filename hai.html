@@ -2,20 +2,39 @@
 <html>
 <head>
 <title>HTML audio Tag</title>
+
+
+
 <script type="text/javascript">
-function playSong(fileName) {
-	var audio = new Audio(fileName);
-	audio.play();
-	audio.addEventListener('ended', function() {
+function playSong() {
+	//var audio = new Audio(fileName);
+	//audio.play
+	
+	var i= 1; 
+//	audio.addEventListener('ended', function() {
+		while (i < 10){
+			var audio = new Audio(i.toString() + ".wav");
+			audio.play;
+			i++;
+
+		}
+
 		// when its done
-		playSong("second.wav")
-		playSong("third.wav")
-	});
+		//playSong("2.wav");
+		//audio.addEventListener('ended');
+	//}	
 }
+
+
+	
 </script>
+
+
+
+
 </head>
 <body>
-<a href="#" onclick='playSong("first.wav")'>Play song 1</a>
+<a href="#" onclick="playSong()">Play song 1</a>
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 var nameList;
-	var data;
+	var rawKey;
+	var intKey;
 	function onKeyUp() {
 	}
 	
@@ -8,10 +9,8 @@ var nameList;
 		console.log($("#getText"));
 		$( "#getText").click(function() {
 		sendRequest();
-		//playSong();
 		});
 	});
-	
 	
 	function sendRequest() {
 	    //var formData = {id:"1",text:"$("#textarea").val();"}; //Array  
@@ -45,24 +44,28 @@ var nameList;
 			}),
 			success: function (data, textStatus, xhrObj)
 			{
-				this.data = data;
+				rawKey = data.documents[0].score;
 				console.log(data);
+				console.log(rawKey);
+				toKey();
 			},
 			error: function(xhrObj){
 				console.log(xhrObj);
 			}
         })
     }
-    function playSong() {
-	var audio1 = new Audio("first.wav");
-	var audio2 = new Audio("second.wav");
-	audio2.pause();
-	audio1.addEventListener('ended', function() {
-		// when its done
-		audio2.play();
-	});
-}
+
 function toKey(){
- var key = data[1].score * 22;
- console.log(key);
+		var key = parseFloat(rawKey) * 22;
+		intKey = parseInt(key);
+		console.log(intKey);
+	}
+    function playSong() {
+	var audio = document.getElementById("player");
+audio.addEventListener("ended", function() {
+    audio.src = "nextAudio.mp3";
+    audio.play();
+});
+
+	};
 }
