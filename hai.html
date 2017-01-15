@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML audio Tag</title>
+<script type="text/javascript">
+function playSong(fileName) {
+	var audio = new Audio(fileName);
+	audio.play();
+	audio.addEventListener('ended', function() {
+		// when its done
+		playSong("second.wav")
+		playSong("third.wav")
+	});
+}
+</script>
+</head>
+<body>
+<a href="#" onclick='playSong("first.wav")'>Play song 1</a>
+
+</body>
+</html>
+
